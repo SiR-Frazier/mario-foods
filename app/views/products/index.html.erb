@@ -1,0 +1,10 @@
+<h1>Mario's Market</h1>
+
+<h2>Our History</h2>
+  <p>We have been Portland's premiere retailer and wholesaler of quality fruits,vegetables, meats and grocery items since 1931.</p>
+<h3>Foods</h3>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
