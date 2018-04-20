@@ -6,6 +6,7 @@
       <ul>
         <% @product.reviews.each do |review| %>
           <li>
+            <br>
             <i>"<%= review.comment %>"</i> <br>
             <%= review.rating %> out of 5 <br>
             <strong>-<%= review.author %></strong><br>
@@ -17,10 +18,10 @@
         <p>There are no reviews yet!</p>
       <% end %>
 
-
+  <p><%= link_to "Leave a review", new_product_review_path(@product) %></p>
 
   <p><%= link_to "Edit", edit_product_path(@product) %></p>
-  <p><%= link_to "Delete", products_path(@product),
+  <p><%= link_to "Delete", product_path(@product),
                            :data => {:confirm => "Are you sure?",
                                      :method => "delete"} %></p>
 
