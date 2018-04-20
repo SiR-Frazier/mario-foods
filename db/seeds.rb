@@ -12,6 +12,11 @@ Product.destroy_all
   Product.create!(name: Faker::Food.ingredient,
                           country_origin: Faker::Space.galaxy,
                           price: Faker::Number.between(1,35))
+  250.times do |index|
+    Review.create!(author: Faker::Name.first_name,
+                            rating: Faker::Number.between(1,5),
+                            comment: Faker::Simpsons.quote)
+  end
 end
 
 p "Created #{Product.count} products"
