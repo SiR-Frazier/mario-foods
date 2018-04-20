@@ -4,7 +4,12 @@ h1 {
   font-family: 'Righteous', cursive;
 }
 .jumbotron {
+  color: white;
+  /*font-size: 2em;*/
   text-align: center;
+  background-image: url(https://images.unsplash.com/photo-1473187983305-f615310e7daa?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ccb48efc3720051b4ccc29c39a43f0c9&auto=format&fit=crop&w=800&q=60);
+  background-size: auto;
+  background-size: 450px;
 }
 
 * {

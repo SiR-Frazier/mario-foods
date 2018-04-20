@@ -1,6 +1,7 @@
 <div class="card-body">
   <h1><%= @product.name %></h1>
-
+  <h2>Country Origin: <%=@product.country_origin %></h2>
+  <h2>Price: $<%=@product.price %></h2>
   <% if @product.reviews.any? %>
     <h4>Here are the reviews for this product:</h4>
       <ul>
