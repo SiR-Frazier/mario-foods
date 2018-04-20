@@ -1,0 +1,22 @@
+# PostgreSQL. Versions 9.1 and up are supported.
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: mario_foods_development
+
+test:
+  <<: *default
+  database: mario_foods_test
+
+#
+production:
+  <<: *default
+  database: mario_foods_production
+  username: mario_foods
+  password: <%= ENV['MARIO_FOODS_DATABASE_PASSWORD'] %>
