@@ -10,6 +10,7 @@ h1 {
 * {
   font-family: 'Patrick Hand', cursive;
   list-style: none;
+  text-align: inherit;
 }
 
 #main-pg {
@@ -19,4 +20,8 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+#intro {
+  text-align: justify;
 }

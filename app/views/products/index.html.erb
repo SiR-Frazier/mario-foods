@@ -4,18 +4,18 @@
   </div>
   <div class = "card-body" style="padding: 20px; text-align: center;">
     <h2>Our History</h2>
-      <p>We have been Portland's premiere retailer and wholesaler of quality fruits,vegetables, meats and grocery items since 1958. Our wholesale operation began in 1963 with Meier and Frank as its only customer. Today we serve some of the finest restaurants and caterers in Northwest Oregon and Southwest Washington. In 1959, the meat department was added and in today's era of pre-packaged meat, it's nice to know there is still somewhere you can get meat cut to your specifications. In the late 1960's top quality groceries and a variety of bulk foods were added as a convenience and value-added option to our customers. This section continues to expand, stocking many hard to find items, as well as a fine selection of wines and boutique beers. The bulk section stocks not only the basics, but also a wide offering of grains, spices, nuts, and dried fruits that serve the needs of Portland's gourmet chefs and specialty cooks. No matter how large we've become, the store still feels like a great farmers' market. Our produce assortment is outstanding- fresh herbs, bulk shallots, sweet onions year-round, okra, fava beans, snap peas, rapini, limestone lettuce, endive, radicchio and much more! Stop on by! </p>
+      <p id="intro">We have been Portland's premiere retailer and wholesaler of quality fruits,vegetables, meats and grocery items since 1958. Our wholesale operation began in 1963 with Meier and Frank as its only customer. Today we serve some of the finest restaurants and caterers in Northwest Oregon and Southwest Washington. In 1959, the meat department was added and in today's era of pre-packaged meat, it's nice to know there is still somewhere you can get meat cut to your specifications. In the late 1960's top quality groceries and a variety of bulk foods were added as a convenience and value-added option to our customers. This section continues to expand, stocking many hard to find items, as well as a fine selection of wines and boutique beers. The bulk section stocks not only the basics, but also a wide offering of grains, spices, nuts, and dried fruits that serve the needs of Portland's gourmet chefs and specialty cooks. No matter how large we've become, the store still feels like a great farmers' market. Our produce assortment is outstanding- fresh herbs, bulk shallots, sweet onions year-round, okra, fava beans, snap peas, rapini, limestone lettuce, endive, radicchio and much more! Stop on by! </p>
       <br>
       <img id="main-pg" src="https://www.sheridanfruit.com/uploads/9/8/6/5/98651940/grampie-picture_orig.jpg" alt="">
     <br>
 
-    <h3>Recent additions!</h3>
+    <h3>New Additions!</h3>
       <ul>
         <% @products.each do |product| %>
           <li><%= link_to product.name, product_path(product) %></li>
         <% end %>
       </ul>
-
+      <br>
     <h3>April's Most Popular Item:</h3>
     <br>
     <h3>Our Products</h3>
@@ -24,6 +24,7 @@
         <li><%= link_to product.name, product_path(product) %></li>
       <% end %>
     </ul>
+    <br>
     <%= link_to "Add Product", new_product_path %>
-  </div>  
+  </div>
 </div>
