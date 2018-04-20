@@ -1,10 +1,9 @@
-<h1>Add Item</h1>
-
 <div class="card">
-  <%= form_for @product do |f| %>
-    <%= f.text_field :name, placeholder: "name" %>
-    <%= f.text_field :country_origin, placeholder: "country of origin" %>
-    <%= f.text_field :price, placeholder: "price" %>
-    <%= f.submit%>
-  <% end %>
+  <h1>Add Item</h1>
+    <%= form_for @product do |f| %>
+      <%= f.text_field :name, placeholder: "name" %>
+      <%= f.text_field :country_origin, placeholder: "country of origin" %>
+      <%= f.text_field :price, placeholder: "price" %>
+      <%= f.submit%>
+    <% end %>
 </div>
