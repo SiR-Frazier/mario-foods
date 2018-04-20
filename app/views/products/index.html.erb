@@ -1,15 +1,20 @@
-<h1>Mario's Market</h1>
+<div class="card">
+  <div class = "jumbotron">
+    <h1>Mario's Market</h1>
+  </div>
+  <h2>Our History</h2>
+    <p>We have been Portland's premiere retailer and wholesaler of quality fruits,vegetables, meats and grocery items since 1958.</p>
 
-<h2>Our History</h2>
-  <p>We have been Portland's premiere retailer and wholesaler of quality fruits,vegetables, meats and grocery items since 1958.</p>
+  <h3>Recent additions!</h3>
+    <ul>
+      <% @products.each do |product| %>
+        <li><%= link_to product.name, product_path(product) %></li>
+      <% end %>
+    </ul>
 
-<h3>Recent additions!</h3>
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= link_to product.name, product_path(product) %></li>
-    <% end %>
-  </ul>
+  <h3>April's Most Popular Item:</h3>
 
-<h3>April's Most Popular Item:</h3>
-
-<img src="https://www.sheridanfruit.com/uploads/9/8/6/5/98651940/grampie-picture_orig.jpg" alt="">
+  <br>
+  <br>
+  <img id="main-pg" src="https://www.sheridanfruit.com/uploads/9/8/6/5/98651940/grampie-picture_orig.jpg" alt="">
+</div>

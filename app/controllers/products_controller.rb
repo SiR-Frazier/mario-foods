@@ -21,10 +21,10 @@ class ProductsController < ApplicationController
     else
       render :new
     end
-  end    
+  end
 
   private
     def product_params
-      params.require(:product).permit(:name)
+      params.require(:product).permit(:name, :country_origin, :price)
     end
 end
