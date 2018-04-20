@@ -3,9 +3,13 @@
 h1 {
   font-family: 'Righteous', cursive;
 }
+.jumbotron {
+  text-align: center;
+}
 
-h2, h3, p, ul {
+* {
   font-family: 'Patrick Hand', cursive;
+  list-style: none;
 }
 
 #main-pg {

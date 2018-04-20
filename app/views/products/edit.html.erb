@@ -1,0 +1,17 @@
+<h1>Update Products</h1>
+
+<% if @product.errors.any? %>
+  <h3>Please fix these errors:</h3>
+  <ul>
+    <% @product.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @product do |f| %>
+  <%= f.text_field :name, placeholder: "name", :required => true %>
+  <%= f.text_field :country_origin, placeholder: "country of origin", :required => true %>
+  <%= f.text_field :price, placeholder: "price", :required => true %>
+  <%= f.submit%>
+<% end %>
