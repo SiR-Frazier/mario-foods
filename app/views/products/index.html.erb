@@ -11,12 +11,31 @@
 
     <h3>New Additions!</h3>
       <ul>
-        <% @products.each do |product| %>
+        <% @products.each do | product | %>
           <li><%= link_to product.name, product_path(product) %></li>
         <% end %>
       </ul>
-      <br>
-    <h3>April's Most Popular Item:</h3>
+    <br>
+    <h3>American Made Items: </h3>
+      <ul>
+        <% @from_USA.each do | product | %>
+          <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </ul>
+    <br>
+    <h3>April's Most Popular Items:</h3>
+      <ol>
+        <% @most_reviews.each do | product | %>
+          <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </ol>
+    <br>
+    <h3>Recently Reviewed Items:</h3>
+      <ul>
+        <% @recently_reviewed.each do | product | %>
+          <li><%= link_to product.name, product_path(product) %></li>
+        <% end %>
+      </ul>
     <br>
     <h3>Our Products</h3>
     <ul>
